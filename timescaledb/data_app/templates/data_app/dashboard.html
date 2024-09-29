@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniswap Data Dashboard</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uniswap Data Dashboard</h1>
+    
+    <h2>Summary</h2>
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Count</th>
+        </tr>
+        <tr>
+            <td>Swaps</td>
+            <td>{{ swap_count }}</td>
+        </tr>
+        <tr>
+            <td>Mints</td>
+            <td>{{ mint_count }}</td>
+        </tr>
+        <tr>
+            <td>Burns</td>
+            <td>{{ burn_count }}</td>
+        </tr>
+        <tr>
+            <td>OHLCV Records</td>
+            <td>{{ ohlcv_count }}</td>
+        </tr>
+    </table>
+
+    {% if latest_ohlcv %}
+    <h2>Latest OHLCV Data</h2>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Close</th>
+            <th>Volume</th>
+        </tr>
+        <tr>
+            <td>{{ latest_ohlcv.timestamp }}</td>
+            <td>{{ latest_ohlcv.open }}</td>
+            <td>{{ latest_ohlcv.high }}</td>
+            <td>{{ latest_ohlcv.low }}</td>
+            <td>{{ latest_ohlcv.close }}</td>
+            <td>{{ latest_ohlcv.volume }}</td>
+        </tr>
+    </table>
+    {% endif %}
+
+    {% if latest_swaps %}
+    <h2>Latest Swaps</h2>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Amount0</th>
+            <th>Amount1</th>
+            <th>Sender</th>
+            <th>Recipient</th>
+        </tr>
+        {% for swap in latest_swaps %}
+        <tr>
+            <td>{{ swap.timestamp }}</td>
+            <td>{{ swap.amount0 }}</td>
+            <td>{{ swap.amount1 }}</td>
+            <td>{{ swap.sender }}</td>
+            <td>{{ swap.recipient }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>

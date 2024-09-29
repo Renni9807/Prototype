@@ -27,13 +27,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--xxzb1&6%^tie(b_wyccc#%3fgnvj=mhp4)7mnpdr@4mfd+s7)'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() in ['true', '1', 't']
-
-
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 
@@ -48,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Custom
-    'transactions',
+    'data_app'
 ]
 
 MIDDLEWARE = [
@@ -94,7 +89,7 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD'),    # TimescaleDB user's password
         'HOST': os.getenv('DB_HOST'),  # 'localhost' if Django and TimescaleDB are on the same EC2 instance
         'PORT': os.getenv('DB_PORT'),   # Default PostgreSQL/TimescaleDB port
-    },
+    }
 }
 
 
