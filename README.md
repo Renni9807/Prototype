@@ -1,6 +1,3 @@
-<img width="1277" alt="swap" src="https://github.com/user-attachments/assets/dfc0441e-9cfd-4e90-bca6-78b7f44ed867"><img width="1310" alt="burn" src="https://github.com/user-attachments/assets/670edd3f-7a99-4f98-aa9b-568a77a25fce"># Prototype
-django timescaledb postgresql AWS EC2 (backup purpose)
-
 # Grafana and TimescaleDB connection
 
 - Need to change inbound rules in EC2 security group to enable Grafana access to EC2 and allow data retrieval.
