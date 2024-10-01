@@ -12,11 +12,10 @@
 # Changing .conf file 
 - Use sudo grep -n to check whether or not the corresponding text/sentence/number exist
 - Use sudo -i sed to change the corresponding text/sentence/number to something you want
-
 - Ensure SSL/TLS is properly set up on the TimescaleDB server.
 
+# Grafana conf
 - In Grafana, use 'PostgreSQL' as the data source type when connecting to TimescaleDB.
-
 - Note: Grafana typically uses port 3000 for its web interface, which uses HTTP/HTTPS. The database connection (to port 5432) is separate from this and should be secured with SSL/TLS.
 
 
