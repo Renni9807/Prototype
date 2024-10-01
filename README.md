@@ -22,4 +22,3 @@
 
 <img style="margin-top: 20px;" width="1200" alt="mint" src="https://github.com/user-attachments/assets/36f7f48f-23b2-4d0f-ae8d-472ea46a8897">
 
-<img style="margin-top: 20px;" width="1200" alt="burn" src="https://github.com/user-attachments/assets/204174af-c2ec-4fe5-a17d-f9051d444c0f">
