@@ -8,6 +8,10 @@
 - Need to configure `pg_hba.conf` file in TimescaleDB. 
   - Add `hostssl` entry because Grafana's default setting requires SSL/TLS connection.
   - Example entry: `hostssl all all 0.0.0.0/0 md5`
+ 
+# Changing .conf file 
+- Use sudo grep -n to check whether or not the corresponding text/sentence/number exist
+- Use sudo -i sed to change the corresponding text/sentence/number to something you want
 
 - Ensure SSL/TLS is properly set up on the TimescaleDB server.
 
