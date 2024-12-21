@@ -25,34 +25,3 @@
 
 <img style="margin-top: 20px;" width="1200" alt="mint" src="https://github.com/user-attachments/assets/36f7f48f-23b2-4d0f-ae8d-472ea46a8897">
 
-Ongoing project (binance testnet algorithm trading as a practice)
-Plan: arbitrage -> HFT -> DEXs arbitrage
-.
-├── CMakeList.txt
-├── README.md
-├── data
-├── include
-│   ├── api
-│   │   └── websocket_stream.h
-│   ├── strategies
-│   └── utils
-├── logs
-├── scripts
-├── src
-│   ├── api
-│   │   ├── api_utils.h
-│   │   ├── fetch_price.cpp
-│   │   └── websocket_stream.cpp
-│   ├── backtest
-│   │   ├── backtest.cpp
-│   │   └── data_loader.cpp
-│   ├── main.cpp
-│   ├── strategies
-│   │   ├── rsi_strategy.cpp
-│   │   ├── sma_strategy.cpp
-│   │   └── strategy_base.h
-│   └── utils
-│       ├── file_utils.h
-│       └── logger.cpp
-├── tests
-└── trading
